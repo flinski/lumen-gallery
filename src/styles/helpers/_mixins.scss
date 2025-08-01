@@ -13,6 +13,7 @@
 
 @mixin ibg($fit: cover, $position: center) {
   position: relative;
+
   // padding-bottom: value%;
   img {
     position: absolute;

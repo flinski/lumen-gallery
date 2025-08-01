@@ -3,12 +3,10 @@
 :root {
   color-scheme: dark;
 
-  --color-text: hsl(0 0% 5%);
-  --color-bg: hsl(0 0% 98%);
-
+  --color-text: hsl(0deg 0% 5%);
+  --color-bg: hsl(0deg 0% 98%);
   --font-family:
-    'Inter', system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+    'Inter', system-ui, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji';
-
   --transition-duration: 0.1s;
 }

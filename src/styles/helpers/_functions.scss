@@ -1,18 +1,18 @@
 @use 'sass:math';
 
 // calc(10px + (40 - 10) * ((100vw - 320px) / (1440 - 320)))
-@function fluid($max, $min, $maxWidth: 1440, $minWidth: 360) {
+@function fluid($max, $min, $max-width: 1440, $min-width: 360) {
   // convert to rem
   $max: math.div($max, 16);
   $min: math.div($min, 16);
-  $maxWidth: math.div($maxWidth, 16);
-  $minWidth: math.div($minWidth, 16);
+  $max-width: math.div($max-width, 16);
+  $min-width: math.div($min-width, 16);
 
   // do calculations
-  $slope: math.div(($max - $min), ($maxWidth - $minWidth));
-  $yAxisIntersection: -$minWidth * $slope + $min;
+  $slope: math.div(($max - $min), ($max-width - $min-width));
+  $y-axis-intersection: -$min-width * $slope + $min;
 
-  @return clamp(#{$min * 1rem}, #{$yAxisIntersection * 1rem} + #{$slope * 100vw}, #{$max * 1rem});
+  @return clamp(#{$min * 1rem}, #{$y-axis-intersection * 1rem} + #{$slope * 100vw}, #{$max * 1rem});
 }
 
 @function to-rem($px) {
