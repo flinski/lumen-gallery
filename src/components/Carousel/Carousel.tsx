@@ -1,16 +1,19 @@
+import type { ApiPhoto } from '@/api'
 import styles from './Carousel.module.scss'
 
-export default function Carousel() {
+type CarouselProps = {
+  photos: ApiPhoto[]
+}
+
+export default function Carousel({ photos }: CarouselProps) {
   return (
     <div className={styles.carousel}>
       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        {photos.map((photo) => (
+          <li>
+            <img src={photo.urls.regular} alt={photo.alt_description} />
+          </li>
+        ))}
       </ul>
     </div>
   )

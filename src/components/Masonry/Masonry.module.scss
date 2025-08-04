@@ -1,0 +1,14 @@
+@use '@/styles/helpers' as *;
+
+.masonry {
+  --gap: #{to-rem(12)};
+
+  columns: to-rem(298);
+  gap: var(--gap);
+  padding-block: to-rem(64);
+
+  img {
+    break-inside: avoid;
+    margin-bottom: var(--gap);
+  }
+}
