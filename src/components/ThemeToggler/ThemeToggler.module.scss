@@ -1,0 +1,15 @@
+@use '@/styles/helpers' as *;
+
+.themeToggler {
+  @include square(40);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: currentcolor;
+  background-color: transparent;
+
+  svg {
+    @include square(24);
+  }
+}

@@ -1,0 +1,43 @@
+@use '@/styles/helpers' as *;
+
+.searchBar {
+  flex-grow: 1;
+  display: flex;
+  border: 1px solid var(--color-bg-2);
+  border-radius: var(--border-radius-small);
+
+  &:has(input:focus-visible) {
+    // border-color: var(--color-text);
+    outline: 1px solid var(--color-text);
+  }
+
+  input {
+    flex-grow: 1;
+    padding-left: to-rem(12);
+    color: currentcolor;
+    background-color: transparent;
+    outline: none;
+
+    &::placeholder {
+      color: var(--color-text-dim);
+    }
+  }
+
+  button {
+    @include square(40);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-dim);
+    background-color: transparent;
+
+    @include hover {
+      color: var(--color-text);
+    }
+
+    svg {
+      @include square(20);
+    }
+  }
+}
