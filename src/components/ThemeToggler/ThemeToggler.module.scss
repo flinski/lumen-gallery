@@ -8,7 +8,10 @@
   justify-content: center;
   color: currentcolor;
   background-color: transparent;
-  border-radius: var(--border-radius-tiny);
+
+  &:focus-visible {
+    outline: 1px solid var(--color-text);
+  }
 
   svg {
     @include square(24);
