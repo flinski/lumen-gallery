@@ -1,0 +1,90 @@
+@use '@/styles/helpers' as *;
+
+.carousel {
+  position: relative;
+  padding-block: to-rem(64);
+}
+
+li {
+  position: absolute;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 24px hsl(0deg 0% 0% / 15%);
+}
+
+ul {
+  height: to-rem(429);
+  perspective: to-rem(1000);
+
+  li:nth-child(1),
+  li:nth-child(7) {
+    z-index: 1;
+    width: to-rem(178);
+    background-color: hsl(0deg 0% 50%);
+  }
+
+  li:nth-child(2),
+  li:nth-child(6) {
+    z-index: 2;
+    width: to-rem(220);
+    background-color: hsl(0deg 0% 60%);
+  }
+
+  li:nth-child(3),
+  li:nth-child(5) {
+    z-index: 3;
+    width: to-rem(272);
+    background-color: hsl(0deg 0% 70%);
+  }
+
+  li:nth-child(1) {
+    top: 50%;
+    left: 18%;
+    translate: -50% -50%;
+    rotate: y 30deg;
+  }
+
+  li:nth-child(2) {
+    top: 50%;
+    left: 25%;
+    translate: -50% -50%;
+    rotate: y 30deg;
+  }
+
+  li:nth-child(3) {
+    top: 50%;
+    left: 35%;
+    translate: -50% -50%;
+    rotate: y 30deg;
+  }
+
+  li:nth-child(4) {
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 4;
+    width: to-rem(322);
+    background-color: hsl(0deg 0% 80%);
+  }
+
+  li:nth-child(5) {
+    top: 50%;
+    left: 65%;
+    translate: -50% -50%;
+    rotate: y -30deg;
+  }
+
+  li:nth-child(6) {
+    top: 50%;
+    left: 75%;
+    translate: -50% -50%;
+    rotate: y -30deg;
+  }
+
+  li:nth-child(7) {
+    top: 50%;
+    left: 82%;
+    translate: -50% -50%;
+    rotate: y -30deg;
+  }
+}
