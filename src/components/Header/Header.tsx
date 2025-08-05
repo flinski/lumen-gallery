@@ -3,7 +3,12 @@ import ThemeToggler from '@/components/ThemeToggler'
 import SearchBar from '@/components/SearchBar/SearchBar'
 import styles from './Header.module.scss'
 
-export default function Header() {
+type HeaderProps = {
+  query: string
+  setQuery: React.Dispatch<React.SetStateAction<string>>
+}
+
+export default function Header({ query, setQuery }: HeaderProps) {
   return (
     <header className={styles.header}>
       <div>
@@ -13,7 +18,7 @@ export default function Header() {
         <ThemeToggler />
       </div>
       <div>
-        <SearchBar />
+        <SearchBar query={query} setQuery={setQuery} />
       </div>
     </header>
   )

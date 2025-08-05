@@ -10,7 +10,7 @@ export default function Carousel({ photos }: CarouselProps) {
     <div className={styles.carousel}>
       <ul>
         {photos.map((photo) => (
-          <li>
+          <li key={photo.id}>
             <img src={photo.urls.regular} alt={photo.alt_description} />
           </li>
         ))}

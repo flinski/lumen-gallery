@@ -1,55 +1,30 @@
-import { useEffect, useState } from 'react'
-import { API_BASE, API_KEY } from '@/api'
-import type { ApiFailedResponse, ApiPhoto, ApiSuccessfulResponse } from '@/api'
+import { useState } from 'react'
+import { usePhotos } from '@/hooks/usePhotos'
+import { initialQuery } from '@/api'
 import Header from '@/components/Header'
 import Carousel from '@/components/Carousel'
 import Masonry from '@/components/Masonry'
 import styles from './App.module.scss'
 
 export default function App() {
-  const [photos, setPhotos] = useState<ApiPhoto[]>([])
-  const [error, setError] = useState<Error | null>(null)
-  const [isLoading, setIsLoading] = useState(false)
+  const [query, setQuery] = useState(initialQuery)
+  const { isLoading, error, photos } = usePhotos(query)
 
-  useEffect(() => {
-    async function fetchPhotos() {
-      setIsLoading(true)
-      setError(null)
-
-      try {
-        const response = await fetch(
-          `${API_BASE}/search/photos?page=1&per_page=30&query=japan&client_id=${API_KEY}`
-        )
-        const data: ApiSuccessfulResponse | ApiFailedResponse = await response.json()
-
-        if ('errors' in data) {
-          throw new Error(data.errors[0])
-        }
-
-        console.log(data)
-        setPhotos(data.results)
-        setError(null)
-      } catch (err) {
-        if (err instanceof Error) {
-          console.error(err)
-          setError(err)
-        }
-      } finally {
-        setIsLoading(false)
-      }
-    }
-
-    fetchPhotos()
-  }, [])
-
-  console.log(error)
-  console.log(isLoading)
+  if (error) {
+    return <div>{error.message}</div>
+  }
 
   return (
     <div className={styles.app}>
-      <Header />
-      <Carousel photos={photos.slice(0, 7)} />
-      <Masonry photos={photos.slice(7)} />
+      <Header query={query} setQuery={setQuery} />
+      {isLoading ? (
+        <div>Loading...</div>
+      ) : (
+        <>
+          <Carousel photos={photos.slice(0, 7)} />
+          <Masonry photos={photos.slice(7)} />
+        </>
+      )}
     </div>
   )
 }

@@ -10,6 +10,7 @@ export default function Masonry({ photos }: MasonryProps) {
     <div className={styles.masonry}>
       {photos.map((photo) => (
         <img
+          key={photo.id}
           src={photo.urls.regular}
           alt={photo.alt_description}
           width={photo.width}

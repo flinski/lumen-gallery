@@ -10,6 +10,7 @@
   img {
     break-inside: avoid;
     margin-bottom: var(--gap);
-    background-color: hsl(0deg 0% 80%);
+    background-color: var(--color-bg-2);
+    cursor: pointer;
   }
 }
