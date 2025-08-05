@@ -1,6 +1,7 @@
 @use '@/styles/helpers' as *;
 
 .loaderWrapper {
+  flex-grow: 1;
   display: flex;
   align-items: center;
   justify-content: center;

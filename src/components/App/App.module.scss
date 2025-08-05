@@ -4,7 +4,10 @@
   --content-width: #{to-rem(926)};
   --padding-x: #{to-rem(30)};
 
+  display: flex;
+  flex-direction: column;
   max-width: calc(var(--content-width) + 2 * var(--padding-x));
+  min-height: 100vh;
   padding-inline: var(--padding-x);
   margin-inline: auto;
 }
