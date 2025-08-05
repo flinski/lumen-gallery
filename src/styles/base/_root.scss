@@ -1,7 +1,7 @@
 @use '@/styles/helpers' as *;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 
   --color-text: hsl(0deg 0% 5%);
   --color-text-dim: hsl(0deg 0% 50%);
@@ -16,6 +16,8 @@
   --transition-duration: 0.1s;
 
   &.dark {
+    color-scheme: dark;
+
     --color-text: hsl(0deg 0% 99%);
     --color-text-dim: hsl(0deg 0% 50%);
     --color-bg: hsl(0deg 0% 5%);

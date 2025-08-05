@@ -1,0 +1,28 @@
+@use '@/styles/helpers' as *;
+
+.loaderWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  width: to-rem(24);
+  height: to-rem(24);
+  border: to-rem(2) solid var(--color-text);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

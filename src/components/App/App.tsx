@@ -4,6 +4,7 @@ import { initialQuery } from '@/api'
 import Header from '@/components/Header'
 import Carousel from '@/components/Carousel'
 import Masonry from '@/components/Masonry'
+import Loader from '@/components/Loader'
 import styles from './App.module.scss'
 
 export default function App() {
@@ -18,7 +19,7 @@ export default function App() {
     <div className={styles.app}>
       <Header query={query} setQuery={setQuery} />
       {isLoading ? (
-        <div>Loading...</div>
+        <Loader center={true} />
       ) : (
         <>
           <Carousel photos={photos.slice(0, 7)} />
