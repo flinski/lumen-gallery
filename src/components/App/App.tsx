@@ -5,6 +5,7 @@ import Header from '@/components/Header'
 import Carousel from '@/components/Carousel'
 import Masonry from '@/components/Masonry'
 import Loader from '@/components/Loader'
+import Footer from '@/components/Footer'
 import styles from './App.module.scss'
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
           <Masonry photos={photos.slice(7)} />
         </>
       )}
+      <Footer />
     </div>
   )
 }

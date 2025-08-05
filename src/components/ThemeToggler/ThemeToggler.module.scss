@@ -8,6 +8,7 @@
   justify-content: center;
   color: currentcolor;
   background-color: transparent;
+	border-radius: var(--border-radius-tiny);
 
   &:focus-visible {
     outline: 2px solid var(--color-text);

@@ -5,7 +5,8 @@
 
   columns: to-rem(230);
   gap: var(--gap);
-  padding-block: to-rem(64);
+  padding-top: to-rem(64);
+  padding-bottom: to-rem(32);
 
   img {
     break-inside: avoid;

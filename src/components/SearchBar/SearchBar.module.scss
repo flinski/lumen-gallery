@@ -4,6 +4,7 @@
   flex-grow: 1;
   display: flex;
   border: 2px solid var(--color-bg-2);
+  border-radius: var(--border-radius-tiny);
 
   &:has(input:focus-visible) {
     outline: 2px solid var(--color-text);
@@ -29,6 +30,7 @@
     justify-content: center;
     color: var(--color-text-dim);
     background-color: transparent;
+    border-radius: var(--border-radius-tiny);
 
     &:focus-visible {
       outline: 2px solid var(--color-text);

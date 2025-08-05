@@ -1,0 +1,10 @@
+@use '@/styles/helpers' as *;
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: to-rem(64);
+  color: var(--color-text-dim);
+  letter-spacing: to-em(0.5, 16);
+}
