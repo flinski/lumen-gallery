@@ -14,4 +14,11 @@
     'Inter', system-ui, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji';
   --transition-duration: 0.1s;
+
+  &.dark {
+    --color-text: hsl(0deg 0% 99%);
+    --color-text-dim: hsl(0deg 0% 50%);
+    --color-bg: hsl(0deg 0% 5%);
+    --color-bg-2: hsl(0deg 0% 10%);
+  }
 }
