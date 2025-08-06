@@ -2,7 +2,7 @@
 
 .app {
   --content-width: #{to-rem(926)};
-  --padding-x: #{to-rem(30)};
+  --padding-x: #{to-rem(32)};
 
   display: flex;
   flex-direction: column;
@@ -10,4 +10,8 @@
   min-height: 100vh;
   padding-inline: var(--padding-x);
   margin-inline: auto;
+
+  @media (width < to-em(460)) {
+    --padding-x: #{to-rem(16)};
+  }
 }

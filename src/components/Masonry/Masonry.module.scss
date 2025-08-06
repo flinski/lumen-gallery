@@ -8,6 +8,16 @@
   padding-top: to-rem(64);
   padding-bottom: to-rem(32);
 
+  @media (width < to-em(768)) {
+    padding-top: to-rem(32);
+    padding-bottom: to-rem(16);
+  }
+
+  @media (width < to-em(460)) {
+    padding-top: to-rem(16);
+    padding-bottom: to-rem(8);
+  }
+
   img {
     break-inside: avoid;
     margin-bottom: var(--gap);

@@ -3,6 +3,14 @@
 .carousel {
   position: relative;
   padding-bottom: to-rem(64);
+
+  @media (width < to-em(768)) {
+    padding-bottom: to-rem(32);
+  }
+
+  @media (width < to-em(460)) {
+    padding-bottom: to-rem(0);
+  }
 }
 
 li {
@@ -37,18 +45,30 @@ ul {
   li:nth-child(7) {
     z-index: 1;
     width: to-rem(178);
+
+    @media (width < to-em(460)) {
+      width: to-rem(142);
+    }
   }
 
   li:nth-child(2),
   li:nth-child(6) {
     z-index: 2;
     width: to-rem(220);
+
+    @media (width < to-em(460)) {
+      width: to-rem(176);
+    }
   }
 
   li:nth-child(3),
   li:nth-child(5) {
     z-index: 3;
     width: to-rem(272);
+
+    @media (width < to-em(460)) {
+      width: to-rem(218);
+    }
   }
 
   li:nth-child(1) {
@@ -78,6 +98,10 @@ ul {
     translate: -50% -50%;
     z-index: 4;
     width: to-rem(322);
+
+    @media (width < to-em(460)) {
+      width: to-rem(258);
+    }
   }
 
   li:nth-child(5) {

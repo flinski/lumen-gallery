@@ -6,6 +6,10 @@
   justify-content: center;
   column-gap: to-rem(32);
   padding-block: to-rem(16);
+
+  @media (width < to-em(460)) {
+    padding-block: to-rem(8);
+  }
 }
 
 .pages {

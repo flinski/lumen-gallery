@@ -7,6 +7,15 @@
   padding-inline: to-rem(16);
   margin-bottom: to-rem(64);
 
+  @media (width < to-em(768)) {
+    margin-bottom: to-rem(32);
+  }
+
+  @media (width < to-em(460)) {
+    padding-inline: to-rem(0);
+    margin-bottom: to-rem(0);
+  }
+
   div {
     flex: 0 0 calc(100% / 3);
   }

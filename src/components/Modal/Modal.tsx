@@ -38,6 +38,7 @@ export default function Modal({ isOpen, selectedPhoto, onClose }: ModalProps) {
         <div
           className={styles.inner}
           style={{ aspectRatio: `${selectedPhoto.width} / ${selectedPhoto.height}` }}
+          // style={{ width: `${selectedPhoto.width}px`, height: `${selectedPhoto.height}px` }}
         >
           <button className={styles.crossButton} onClick={onClose}>
             <CrossIcon />
