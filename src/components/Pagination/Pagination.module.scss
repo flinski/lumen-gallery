@@ -1,0 +1,38 @@
+@use '@/styles/helpers' as *;
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: to-rem(32);
+  padding-block: to-rem(16);
+}
+
+.pages {
+  font-weight: 500;
+}
+
+.prevButton,
+.nextButton {
+  @include square(40);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: currentcolor;
+  background-color: transparent;
+  border-radius: var(--border-radius-tiny);
+
+  &:disabled {
+    color: var(--color-text-dim);
+    cursor: not-allowed;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-text);
+  }
+
+  svg {
+    @include square(24);
+  }
+}

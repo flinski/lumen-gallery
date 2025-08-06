@@ -6,11 +6,12 @@ import Carousel from '@/components/Carousel'
 import Masonry from '@/components/Masonry'
 import Loader from '@/components/Loader'
 import Footer from '@/components/Footer'
+import Pagination from '@/components/Pagination'
 import styles from './App.module.scss'
 
 export default function App() {
   const [query, setQuery] = useState(initialQuery)
-  const { isLoading, error, photos } = usePhotos(query)
+  const { isLoading, error, photos, page, totalPages, setPage } = usePhotos(query)
 
   if (error) {
     return <div>{error.message}</div>
@@ -25,6 +26,7 @@ export default function App() {
         <>
           <Carousel photos={photos.slice(0, 7)} />
           <Masonry photos={photos.slice(7)} />
+          <Pagination page={page} totalPages={totalPages} setPage={setPage} />
         </>
       )}
       <Footer />

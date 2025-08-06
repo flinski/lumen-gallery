@@ -14,6 +14,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck": "tsc -b --noEmit",
+    "pre-commit": "npm run format && npm run style && npm run lint && npm run typecheck",
     "prepare": "husky"
   },
   "dependencies": {
