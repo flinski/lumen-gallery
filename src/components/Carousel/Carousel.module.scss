@@ -12,6 +12,11 @@ li {
   box-shadow: 0 8px 24px hsl(0deg 0% 0% / 15%);
   overflow: hidden;
   cursor: pointer;
+  transition: scale 0.2s ease 0s;
+
+  &:hover {
+    scale: 1.05;
+  }
 
   img {
     position: absolute;
